@@ -1,0 +1,3 @@
+[submodule "tools/majestic"]
+	path = tools/majestic
+	url = https://github.com/Raathigesh/majestic.git

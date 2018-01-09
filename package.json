@@ -1,0 +1,20 @@
+{
+  "name": "longphu-app",
+  "version": "1.0.0",
+  "description": "Long Phu App",
+  "main": "index.js",
+  "repository": "https://github.com/longphu-thesis/longphu-app.git",
+  "author": "Long Phu <longphu257@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "test": "jest"
+  },
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "jest": "^22.0.4"
+  }
+}
