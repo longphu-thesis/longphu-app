@@ -6,4 +6,5 @@ client/yarn-error.log
 !client/dist/_config.yml
 !client/dist/README.md
 .idea/
+client/coverage
 

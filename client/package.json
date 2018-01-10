@@ -8,12 +8,16 @@
   "license": "MIT",
   "scripts": {
     "deploy": "gh-pages -d dist",
-    "test": "jest"
+    "test": "jest",
+    "test-ci": "jest --config config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "^3.0.0",
+    "electron": "^1.7.10",
     "gh-pages": "^1.1.0",
-    "webpack": "^3.10.0",
-    "jest": "^22.0.4"
+    "jest": "^22.0.4",
+    "lighthouse": "^2.7.0",
+    "webpack": "^3.10.0"
   }
 }

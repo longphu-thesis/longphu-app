@@ -1,0 +1,6 @@
+{
+  "collectCoverageFrom": [
+    "*.js",
+    "!index.js"
+  ]
+}

@@ -1,3 +1,6 @@
 [submodule "tools/majestic"]
 	path = tools/majestic
 	url = https://github.com/Raathigesh/majestic.git
+[submodule "tools/electron-webpack-dashboard"]
+	path = tools/electron-webpack-dashboard
+	url = https://github.com/FormidableLabs/electron-webpack-dashboard.git
