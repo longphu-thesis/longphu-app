@@ -12,4 +12,8 @@ before_install:
 install:
   - yarn
 script:
+  - yarn test-mocha
   - yarn test-ci
+branches:
+  only:
+    - master

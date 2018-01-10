@@ -9,11 +9,17 @@
   "scripts": {
     "deploy": "gh-pages -d dist",
     "test": "jest",
+    "test-mocha": "mocha -R spec test/*-spec.js",
     "test-ci": "jest --config config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "mocha": "^4.1.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
     "coveralls": "^3.0.0",
+    "david": "^11.0.0",
     "electron": "^1.7.10",
     "gh-pages": "^1.1.0",
     "jest": "^22.0.4",
