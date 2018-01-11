@@ -9,7 +9,7 @@
   "scripts": {
     "deploy": "gh-pages -d dist",
     "test": "jest",
-    "test-mocha": "mocha -R spec test/*-spec.js",
+    "test-mocha-spec": "mocha -R spec sample/test/*-spec.js",
     "test-ci": "jest --config config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
