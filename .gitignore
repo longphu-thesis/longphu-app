@@ -1,4 +1,4 @@
-client/node_modules/*
+client/node_modules/
 client/dist/*
 client/package-lock.json
 client/yarn-error.log
@@ -6,5 +6,4 @@ client/yarn-error.log
 !client/dist/_config.yml
 !client/dist/README.md
 .idea/
-client/coverage
-
+client/coverage/
