@@ -2,13 +2,19 @@ module.exports = {
   // transform: {
   //   "^.+\\.(ts|tsx)$": "ts-jest/preprocessor"
   // },
-  testPathIgnorePatterns: ["/node_modules/", "/dist/", "<rootDir>/coverage/"],
+  testPathIgnorePatterns: [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/",
+      "<rootDir>/coverage/",
+      "<rootDir>/test_config/"
+  ],
   // moduleFileExtensions: ["js", "ts", "tsx", "json"],
   // testMatch: ["**/*.test.ts", "**/*.test.tsx"],
   // snapshotSerializers: ["enzyme-to-json/serializer"],
-  // setupFiles: ["<rootDir>/test_config/jestSetup.ts"],
+  setupFiles: ["<rootDir>/test_config/jestSetup.ts"],
   collectCoverageFrom: [
-      "*.js",
-      "!index.js"
+      "src/**/*.{js,jsx}",
+      "!index.js",
+      "!src/**/*-spec.js"
   ]
 };
