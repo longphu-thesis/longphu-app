@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist",
     "test": "jest",
     "test-mocha-spec": "mocha -R spec sample/test/*-spec.js",
-    "test-ci": "jest --config config.json --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "test-ci": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
     "@blueprintjs/core": "^1.35.0",
