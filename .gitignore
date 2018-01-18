@@ -1,9 +1,4 @@
-client/node_modules/
-client/dist/*
-client/package-lock.json
-client/yarn-error.log
-!client/dist/.gitkeep
-!client/dist/_config.yml
-!client/dist/README.md
 .idea/
-client/coverage/
+tools/
+vendor/
+!vendor/vendor.json
