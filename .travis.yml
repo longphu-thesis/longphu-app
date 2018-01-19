@@ -6,6 +6,14 @@ go:
 
 install: true
 
+matrix:
+  # It's ok if our code fails on unstable development versions of Go.
+  allow_failures:
+    - go: master
+  # Don't wait for tip tests to finish. Mark the test run green if the
+  # tests pass on the stable versions of Go.
+  fast_finish: true
+
 notifications:
   email: false
 
@@ -34,11 +42,13 @@ script:
   - go test -v -tags feature2 -race $GO_FILES_IGNORE_VENDOR
       # tag feature1 & feature2
   - go test -v -tags="feature1 feature2" -race $GO_FILES_IGNORE_VENDOR
+  # Run all the tests with the race detector enabled
+  - go test -v -bench -race $GO_FILES_IGNORE_VENDOR
 #  - go test -v -race ./..
-  - go vet ./...                             # go vet is the official Go static analyzer
-  - megacheck ./...                          # "go vet on steroids" + linter
-  - gocyclo -over 19 $GO_FILES               # forbid code with huge functions
-  - golint -set_exit_status $GO_FILES_IGNORE_VENDOR # one last linter
+  - go vet $GO_FILES_IGNORE_VENDOR                              # go vet is the official Go static analyzer
+  - megacheck $GO_FILES_IGNORE_VENDOR                           # "go vet on steroids" + linter
+  - gocyclo -over 19 $GO_FILES                                  # forbid code with huge functions
+  - golint -set_exit_status $GO_FILES_IGNORE_VENDOR             # one last linter
 
 branches:
   only:

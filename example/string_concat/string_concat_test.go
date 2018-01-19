@@ -1,4 +1,4 @@
-package example
+package string_concat
 
 import "testing"
 
