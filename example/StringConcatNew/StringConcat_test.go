@@ -2,6 +2,7 @@ package StringConcatNew
 
 import (
 	"testing"
+	"bytes"
 )
 
 const TEST_STRING = "test"
@@ -54,6 +55,28 @@ func TestConcatOperator(t *testing.T) {
 func TestSelfConcatOperator(t *testing.T) {
 
 	output := SelfConcatOperator("test", 1)
+
+	if output != "test" {
+		t.Errorf("Concat was incorrect, got: %s, want: %s.", output, "test")
+	}
+}
+
+// Test Function ConcatBuffer
+func TestConcatBuffer(t *testing.T) {
+	var output bytes.Buffer
+
+	ConcatBuffer(&output, "test")
+	originalString := string(output.Bytes())
+
+	if originalString != "test" {
+		t.Errorf("Concat was incorrect, got: %s, want: %s.", originalString, "test")
+	}
+}
+
+// Test Function SelfConcatBuffer
+func TestSelfConcatBuffer(t *testing.T) {
+
+	output := SelfConcatBuffer("test", 1)
 
 	if output != "test" {
 		t.Errorf("Concat was incorrect, got: %s, want: %s.", output, "test")
