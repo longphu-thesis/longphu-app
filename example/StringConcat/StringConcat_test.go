@@ -1,4 +1,4 @@
-package string_concat
+package StringConcat
 
 import "testing"
 

@@ -1,4 +1,4 @@
-package tst_tag
+package TstTag
 
 import "testing"
 

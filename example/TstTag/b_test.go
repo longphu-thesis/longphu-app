@@ -1,6 +1,6 @@
 // +build !feature1
 
-package tst_tag
+package TstTag
 
 import "testing"
 

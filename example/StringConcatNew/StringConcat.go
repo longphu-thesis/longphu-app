@@ -1,4 +1,4 @@
-package string_concat_new
+package StringConcatNew
 
 import (
 	"bytes"

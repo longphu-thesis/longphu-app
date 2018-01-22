@@ -1,4 +1,4 @@
-package string_concat
+package StringConcat
 
 func ConcatOperator(original *string, concat string) {
 	// This could be written as 'return *original + concat'
