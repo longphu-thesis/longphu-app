@@ -1,6 +1,8 @@
 package StringConcatNew
 
-import "testing"
+import (
+	"testing"
+)
 
 const TEST_STRING = "test"
 
@@ -36,3 +38,24 @@ func BenchmarkConcatBuffer1000(b *testing.B)   { benchmarkConcat(1000, SelfConca
 func BenchmarkConcatBuffer10000(b *testing.B)  { benchmarkConcat(10000, SelfConcatBuffer, b) }
 // BenchmarkConcatBuffer100000
 func BenchmarkConcatBuffer100000(b *testing.B) { benchmarkConcat(100000, SelfConcatBuffer, b) }
+
+// Test Function ConcatOperator
+func TestConcatOperator(t *testing.T) {
+	output := ""
+
+	ConcatOperator(&output, "test")
+
+	if output != "test" {
+		t.Errorf("Concat was incorrect, got: %s, want: %s.", output, "test")
+	}
+}
+
+// Test Function SelfConcatOperator
+func TestSelfConcatOperator(t *testing.T) {
+
+	output := SelfConcatOperator("test", 1)
+
+	if output != "test" {
+		t.Errorf("Concat was incorrect, got: %s, want: %s.", output, "test")
+	}
+}

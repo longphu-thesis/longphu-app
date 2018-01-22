@@ -6,6 +6,7 @@ GO_FILES_IGNORE_VENDOR=$(go list ./... | grep -v /vendor/)
 
 # Run all the tests with the race detector enabled
 go test -v -race  $GO_FILES_IGNORE_VENDOR
+# go test -v -race  $(go list ./... | grep -v /vendor/)
       # all tag
 go test -v -tags all -race  $GO_FILES_IGNORE_VENDOR
       # tag feature1

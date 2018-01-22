@@ -28,6 +28,7 @@ script:
   - bash ./bash/test.sh
 #  - bash ./bash/check_code.sh
   - bash ./bash/codecov.sh
+  - bash ./bash/benchmark.sh
 
 after_success:
   - bash ./bash/goveralls.sh
