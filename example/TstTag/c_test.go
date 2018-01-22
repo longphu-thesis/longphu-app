@@ -5,4 +5,5 @@ package TstTag
 
 import "testing"
 
+// Test C
 func TestC(t *testing.T) {}

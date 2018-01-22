@@ -2,6 +2,7 @@ package example
 
 import "testing"
 
+// Test Function Sum
 func TestSum(t *testing.T) {
 	total := Sum(5, 5)
 
