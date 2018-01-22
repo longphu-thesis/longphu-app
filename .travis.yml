@@ -27,6 +27,7 @@ script:
 #  - bash ./bash/formatted.sh
   - bash ./bash/test.sh
   - bash ./bash/check_code.sh
+  - bash ./bash/test_coverprofile.sh
 
 branches:
   only:
